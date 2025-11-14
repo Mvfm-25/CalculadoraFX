@@ -22,3 +22,8 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Para não ter que importar configurações do VSCode.
+# Caso não tenhas o JDK do javaFX instalado, podes configurar manualmente no vsCode após baixar o SDK por aqui :
+# 'https://openjfx.io/'
+.vscode/
