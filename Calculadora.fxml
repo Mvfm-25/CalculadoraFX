@@ -11,7 +11,7 @@
 
     <!-- Display -->
     <TextField fx:id="display" editable="false" alignment="CENTER_RIGHT" 
-               promptText="0" prefHeight="60"
+               promptText="0" prefHeight="70"
                style="-fx-background-color: #34495e; -fx-text-fill: white; 
                       -fx-font-size: 24px; -fx-border-color: #1abc9c; 
                       -fx-border-width: 2px; -fx-border-radius: 5px; 
@@ -22,121 +22,121 @@
     </TextField>
 
     <!-- Grid de botões -->
-    <GridPane hgap="8" vgap="8">
+    <GridPane hgap="10" vgap="10">
         
-        <!-- Linha 1: Clear e operações -->
-        <Button text="C" onAction="#limpaTela" prefWidth="60" prefHeight="60"
+        <!-- Linha 1: Clear e operações básicas -->
+        <Button text="C" onAction="#limpaTela" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #e74c3c; -fx-text-fill: white; 
-                       -fx-font-size: 18px; -fx-font-weight: bold; 
+                       -fx-font-size: 20px; -fx-font-weight: bold; 
                        -fx-background-radius: 5px; -fx-border-radius: 5px;"
                 GridPane.columnIndex="0" GridPane.rowIndex="0"/>
         
-        <Button text="/" onAction="#divisao" prefWidth="60" prefHeight="60"
+        <Button text="÷" onAction="#divisao" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #f39c12; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-font-weight: bold; 
+                       -fx-font-size: 24px; -fx-font-weight: bold; 
                        -fx-background-radius: 5px;"
                 GridPane.columnIndex="1" GridPane.rowIndex="0"/>
         
-        <Button text="*" onAction="#multiplicacao" prefWidth="60" prefHeight="60"
+        <Button text="×" onAction="#multiplicacao" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #f39c12; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-font-weight: bold; 
+                       -fx-font-size: 24px; -fx-font-weight: bold; 
                        -fx-background-radius: 5px;"
                 GridPane.columnIndex="2" GridPane.rowIndex="0"/>
         
-        <Button text="-" onAction="#subtracao" prefWidth="60" prefHeight="60"
+        <Button text="−" onAction="#subtracao" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #f39c12; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-font-weight: bold; 
+                       -fx-font-size: 24px; -fx-font-weight: bold; 
                        -fx-background-radius: 5px;"
                 GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
-       <!-- Linha 2 : Raíz quadarada, expoenciais & adição -->
-       <Button text="√" onAction="#raizQuadrada" prefWidth="60" prefHeight="60"
+       <!-- Linha 2: Raíz quadrada, exponenciais & adição -->
+       <Button text="√" onAction="#raizQuadrada" prefWidth="75" prefHeight="65"
               style="-fx-background-color: #f39c12; -fx-text-fill: white; 
-                     -fx-font-size: 20px; -fx-font-weight: bold; 
+                     -fx-font-size: 24px; -fx-font-weight: bold; 
                      -fx-background-radius: 5px;"
               GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
-       <Button text="x^x" onAction="#exponencial" prefWidth="60" prefHeight="60"
+       <Button text="xʸ" onAction="#exponencial" prefWidth="75" prefHeight="65"
               style="-fx-background-color: #f39c12; -fx-text-fill: white; 
                      -fx-font-size: 20px; -fx-font-weight: bold; 
                      -fx-background-radius: 5px;"
               GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-       <Button text="x^2" onAction="#aoQuadrado" prefWidth="60" prefHeight="60"
+       <Button text="x²" onAction="#aoQuadrado" prefWidth="75" prefHeight="65"
               style="-fx-background-color: #f39c12; -fx-text-fill: white; 
                      -fx-font-size: 20px; -fx-font-weight: bold; 
                      -fx-background-radius: 5px;"
               GridPane.columnIndex="2" GridPane.rowIndex="1"/>
 
-       <Button text="+" onAction="#adicao" prefWidth="60" prefHeight="60"
+       <Button text="+" onAction="#adicao" prefWidth="75" prefHeight="65"
               style="-fx-background-color: #f39c12; -fx-text-fill: white; 
-                     -fx-font-size: 20px; -fx-font-weight: bold; 
+                     -fx-font-size: 24px; -fx-font-weight: bold; 
                      -fx-background-radius: 5px;"
               GridPane.columnIndex="3" GridPane.rowIndex="1"/>
 
 
-        <!-- Linha 3: 7, 8, 9, + -->
-        <Button text="7" onAction="#adicionaNumero" prefWidth="60" prefHeight="60"
+        <!-- Linha 3: 7, 8, 9 -->
+        <Button text="7" onAction="#adicionaNumero" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #95a5a6; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-background-radius: 5px;"
+                       -fx-font-size: 22px; -fx-background-radius: 5px;"
                 GridPane.columnIndex="0" GridPane.rowIndex="2"/>
         
-        <Button text="8" onAction="#adicionaNumero" prefWidth="60" prefHeight="60"
+        <Button text="8" onAction="#adicionaNumero" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #95a5a6; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-background-radius: 5px;"
+                       -fx-font-size: 22px; -fx-background-radius: 5px;"
                 GridPane.columnIndex="1" GridPane.rowIndex="2"/>
         
-        <Button text="9" onAction="#adicionaNumero" prefWidth="60" prefHeight="60"
+        <Button text="9" onAction="#adicionaNumero" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #95a5a6; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-background-radius: 5px;"
+                       -fx-font-size: 22px; -fx-background-radius: 5px;"
                 GridPane.columnIndex="2" GridPane.rowIndex="2"/>
         
 
         <!-- Linha 4: 4, 5, 6 -->
-        <Button text="4" onAction="#adicionaNumero" prefWidth="60" prefHeight="60"
+        <Button text="4" onAction="#adicionaNumero" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #95a5a6; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-background-radius: 5px;"
+                       -fx-font-size: 22px; -fx-background-radius: 5px;"
                 GridPane.columnIndex="0" GridPane.rowIndex="3"/>
         
-        <Button text="5" onAction="#adicionaNumero" prefWidth="60" prefHeight="60"
+        <Button text="5" onAction="#adicionaNumero" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #95a5a6; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-background-radius: 5px;"
+                       -fx-font-size: 22px; -fx-background-radius: 5px;"
                 GridPane.columnIndex="1" GridPane.rowIndex="3"/>
         
-        <Button text="6" onAction="#adicionaNumero" prefWidth="60" prefHeight="60"
+        <Button text="6" onAction="#adicionaNumero" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #95a5a6; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-background-radius: 5px;"
+                       -fx-font-size: 22px; -fx-background-radius: 5px;"
                 GridPane.columnIndex="2" GridPane.rowIndex="3"/>
 
         <!-- Linha 5: 1, 2, 3, = (rowspan 2) -->
-        <Button text="1" onAction="#adicionaNumero" prefWidth="60" prefHeight="60"
+        <Button text="1" onAction="#adicionaNumero" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #95a5a6; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-background-radius: 5px;"
+                       -fx-font-size: 22px; -fx-background-radius: 5px;"
                 GridPane.columnIndex="0" GridPane.rowIndex="4"/>
         
-        <Button text="2" onAction="#adicionaNumero" prefWidth="60" prefHeight="60"
+        <Button text="2" onAction="#adicionaNumero" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #95a5a6; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-background-radius: 5px;"
+                       -fx-font-size: 22px; -fx-background-radius: 5px;"
                 GridPane.columnIndex="1" GridPane.rowIndex="4"/>
         
-        <Button text="3" onAction="#adicionaNumero" prefWidth="60" prefHeight="60"
+        <Button text="3" onAction="#adicionaNumero" prefWidth="75" prefHeight="65"
                 style="-fx-background-color: #95a5a6; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-background-radius: 5px;"
+                       -fx-font-size: 22px; -fx-background-radius: 5px;"
                 GridPane.columnIndex="2" GridPane.rowIndex="4"/>
         
-        <Button text="=" onAction="#calcula" prefWidth="60" prefHeight="128"
+        <Button text="=" onAction="#calcula" prefWidth="75" prefHeight="140"
                 style="-fx-background-color: #1abc9c; -fx-text-fill: white; 
-                       -fx-font-size: 24px; -fx-font-weight: bold; 
+                       -fx-font-size: 28px; -fx-font-weight: bold; 
                        -fx-background-radius: 5px;"
-                GridPane.columnIndex="3" GridPane.rowIndex="2" 
-                GridPane.rowSpan="3"/>
+                GridPane.columnIndex="3" GridPane.rowIndex="3" 
+                GridPane.rowSpan="2"/>
 
         <!-- Linha 6: 0 (colspan 3) -->
-        <Button text="0" onAction="#adicionaNumero" prefWidth="128" prefHeight="60"
+        <Button text="0" onAction="#adicionaNumero" prefWidth="245" prefHeight="65"
                 style="-fx-background-color: #95a5a6; -fx-text-fill: white; 
-                       -fx-font-size: 20px; -fx-background-radius: 5px;"
+                       -fx-font-size: 22px; -fx-background-radius: 5px;"
                 GridPane.columnIndex="0" GridPane.rowIndex="5" 
-                GridPane.columnSpan="4"/>
+                GridPane.columnSpan="3"/>
     </GridPane>
 
 </VBox>
