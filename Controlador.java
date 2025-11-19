@@ -2,7 +2,7 @@
 // Primeiro implementar com apenas dois operandos, procurando expandir isso depois.
 // [mvfm]
 //
-// Criado : 14/11/2025  ||  Última vez alterado : 14/11/2025
+// Criado : 14/11/2025  ||  Última vez alterado : 19/11/2025
 
 // Importando das bibliotecas javafx.
 import javafx.event.ActionEvent;
@@ -57,8 +57,7 @@ public class Controlador {
         display.setText(s);
     }
 
-    // Métodos para operações. 
-    // Mais bonitinho agora.
+    // Métodos para operações binárias. Que precisam de dois números para ocorrer.
     @FXML
     public void adicao(ActionEvent evento) {
         defineOperador("+");
@@ -74,6 +73,20 @@ public class Controlador {
     @FXML
     public void divisao(ActionEvent evento) {
         defineOperador("/");
+    }
+    @FXML
+    public void exponencial(ActionEvent evento){
+        defineOperador("^");
+    }
+
+    // Operações unárias. Praticamente criadas só pra ter raíz quadrada.
+    @FXML
+    public void raizQuadrada(ActionEvent evento){
+        calculaUnario("√");
+    }
+    @FXML
+    public void aoQuadrado(ActionEvent evento){
+        calculaUnario("x²");
     }
 
     private void defineOperador(String op){
@@ -137,6 +150,9 @@ public class Controlador {
                     }
                     resultado = num1 / num2;
                     break;
+                case "^" :
+                    resultado = Math.pow(num1, num2);
+                    break;
             }
 
             // Formatação do resultado.
@@ -160,7 +176,52 @@ public class Controlador {
             limpaEstado();
         }
 
+    }
 
+    // Método separado para operações unárias
+    private void calculaUnario(String op){
+        if(operando1.isEmpty()){
+            return;
+        }
+
+        try{
+            double num1 = Double.parseDouble(operando1);
+            double resultado = 0;
+
+            switch(op){
+                case "√":
+                    if(num1 < 0){
+                        atualizaTela("Erro : Raiz de número negativo!");
+                        return;
+                    }
+                    resultado = Math.sqrt(num1);
+                    break;
+                case "x²":
+                    resultado = Math.pow(num1, 2);
+                    break;
+            }
+
+            // Formatação do resultado.
+            String resultadoStr;
+            if(resultado == (long) resultado){
+                resultadoStr = String.valueOf((long) resultado);
+            } else {
+                resultadoStr = String.valueOf(resultado);
+            }
+
+            atualizaTela(resultadoStr);
+
+            // Limpa tudo pra próxima operação.
+            operando1 = resultadoStr;
+            operando2 = "";
+            operador = "";
+            primeiroNumero = true;
+            mostrandoResultado = true;
+
+        } catch (NumberFormatException e){
+            atualizaTela("Erro: Formato inválido");
+            limpaEstado();
+        }
 
     }
 
